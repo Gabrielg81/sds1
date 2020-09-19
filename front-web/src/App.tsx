@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   return (
-    <h1>Hello Semana DEV Superior</h1>
+    <div>
+      <Header/>
+      <h1>Semana DEV Superior</h1>
+    </div>
   );
 }
 
