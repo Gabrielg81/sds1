@@ -12,7 +12,7 @@ const placeholder ={
   label:'Selecione o game',
   value: null
 }
-const BASE_URL = 'http://192.168.1.19:8080';
+const BASE_URL = 'https://sds-game.herokuapp.com';
 
 const mapSelectValues = (games: Game[]) => {
   return games.map(game =>({
@@ -48,6 +48,7 @@ const CreateRecord = () => {
         setSelectedGame('');
         setPlatform(undefined);
       })
+      .catch(()=> Alert.alert('Erro ao cadastrar!'))
     }
 
     useEffect(()=> {
@@ -55,8 +56,8 @@ const CreateRecord = () => {
       .then(response => {
         const selectValues = mapSelectValues(response.data);
         setAllGames(selectValues);
-      
       })
+      .catch(()=> Alert.alert('Erro ao lista os jogos!'))
     }, []);
 
     return (
