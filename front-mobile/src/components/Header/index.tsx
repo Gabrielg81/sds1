@@ -8,7 +8,7 @@ const Header = () => {
 
     const handleOnpress = () => {
       navigation.navigate('Home');
-      //testando push que tinha dado erro
+      
   }
 
  return (
