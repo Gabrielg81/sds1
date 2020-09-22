@@ -27,8 +27,8 @@ const Records = () => {
             <table className="records-table" cellPadding="0" cellSpacing="0">
                 <thead>
                     <tr>
-                        <th>INSTANTE</th>
-                        <th>NOME</th>
+                        <th className="mobile">INSTANTE</th>
+                        <th className="mobile_alt">NOME</th>
                         <th>IDADE</th>
                         <th>PLATAFORMA</th>
                         <th>GÊNERO</th>
@@ -38,8 +38,8 @@ const Records = () => {
                 <tbody>
                 {recordsResponse?.content.map(record => (
                     <tr key={record.id}>
-                        <td>{formatDate(record.moment)}</td>
-                        <td>{record.name} </td>
+                        <td className="mobile">{formatDate(record.moment)}</td>
+                        <td className="mobile_alt_nome">{record.name} </td>
                         <td>{record.age}</td>
                         <td className="text-secondary">{record.gamePlatform} </td>
                         <td>{record.genreName} </td>

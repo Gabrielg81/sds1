@@ -62,7 +62,7 @@ const Charts = () => {
                         Jogos mais votados !
                     </h1>
                     <div className="games-container">
-                        <Chart options={barOptions} type="bar" width="800" height="650" series={[{ data: barChartData }]} />
+                        <Chart options={barOptions} type="bar" width="600" height="650" series={[{ data: barChartData }]} />
                     </div>
                 </div>
                 <div className="charts">
@@ -72,7 +72,7 @@ const Charts = () => {
                             type="donut"
                             series={platformData?.series}
                             width="350"
-                            options={{ ...pieOptions, labels: genderData?.labels }}
+                            options={{ ...pieOptions, labels: platformData?.labels }}
                         />
                     </div>
                     <div className="gender-chart">
